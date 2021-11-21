@@ -1,1 +1,1 @@
-# react-markdown-reader-previewer
+# react-hotels-app
