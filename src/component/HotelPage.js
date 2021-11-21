@@ -10,19 +10,18 @@ class HotelPage extends React.Component {
   }
   render() {
     return (
-      <div className="container">
-        <main className="card">
-          <header className="card-header">
-            <h1 className="title">{this.props.name}</h1>
-          </header>
-          <article className="card-content">
-            <h2 className="secondary-title"> {this.props.address}</h2>
-            <p className="text"> {this.props.info} </p>
-          </article>
-          <footer className="card-footer">
-            <CallNowButton />
-          </footer>
-        </main>
+      <div className="wrapper">
+        <h1>{this.props.name}</h1>
+        <img src={this.props.img} alt="" width="300px" className="image i1" />
+        <div className="details">
+          <h1>
+            <em>{this.props.address}</em>
+          </h1>
+          <h2>{this.props.info}</h2>
+          <p>3 Days - 2 Nights</p>
+        </div>
+        <h1>£750</h1>
+        <CallNowButton className="button" />
       </div>
     );
   }

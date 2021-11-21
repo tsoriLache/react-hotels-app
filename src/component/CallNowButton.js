@@ -7,9 +7,8 @@ class CallNowButton extends React.Component {
   }
   render() {
     return (
-      <button className="btn">
-        <span className="btn-text">Call Now</span>
-        <i className="fas fa-chevron-right"></i>
+      <button className="button">
+        <span>Call Now</span>
       </button>
     );
   }

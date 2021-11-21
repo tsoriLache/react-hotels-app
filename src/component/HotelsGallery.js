@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import HotelCard from './HotelCard';
+import { kebabCase } from '../helpers/string';
 
 class HotelsGallery extends React.Component {
   constructor(props) {
@@ -8,16 +10,12 @@ class HotelsGallery extends React.Component {
   }
   render() {
     return (
-      <main>
+      <main className="gallery">
         {this.props.hotels.map((hotel, index) => {
           return (
-            <HotelCard
-              key={'' + index}
-              name={hotel.name}
-              // liClick={() => {
-              //   this.props.liClick(item);
-              // }}
-            />
+            <Link to={kebabCase(hotel.name)} key={'' + index}>
+              <HotelCard name={hotel.name} img={hotel.img} />
+            </Link>
           );
         })}
       </main>

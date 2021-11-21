@@ -9,13 +9,14 @@ class HotelCard extends React.Component {
   }
   render() {
     return (
-      <div className="container">
-        <main className="card">
-          <header className="card-header"></header>
-          <article className="card-content">
-            <h2 className="secondary-title"> {this.props.name}</h2>
-          </article>
-        </main>
+      <div className="card 1">
+        <div className="card_image">
+          {' '}
+          <img src={this.props.img} />{' '}
+        </div>
+        <div className="card_title title-white">
+          <p>{this.props.name}</p>
+        </div>
       </div>
     );
   }
